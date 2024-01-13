@@ -1,5 +1,5 @@
 program simpleQ
-use iso_fortran_env, only: wp => real128
+use iso_fortran_env, only: dp => real64, wp => real128
 implicit none
 
 ! Answering a simple question posed at http://geocar.sdf1.org/numbers.html
@@ -7,11 +7,8 @@ implicit none
 !
 ! Tom Canich <tom@canich.net>
 
-real(wp) :: m,n
-
-m = 9999999999999999.0_wp
-n = 9999999999999998.0_wp
-
-write(*,'(f3.1)') m - n
+write(*,'(a,f3.1)') 'Single: ', 9999999999999999.0-9999999999999998.0
+write(*,'(a,f3.1)') 'Double: ', 9999999999999999.0_dp-9999999999999998.0_dp
+write(*,'(a,f3.1)') 'Quadruple: ', 9999999999999999.0_wp-9999999999999998.0_wp
 
 end program
