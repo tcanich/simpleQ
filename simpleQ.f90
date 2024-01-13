@@ -12,6 +12,6 @@ real(wp) :: m,n
 m = 9999999999999999.0_wp
 n = 9999999999999998.0_wp
 
-write(*,*) m - n
+write(*,'(f3.1)') m - n
 
 end program
